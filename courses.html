@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harbour College - Courses</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+
+        <div class="toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="courses.html" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Courses</span>
+        </a>
+
+        <a href="news.html" class="nav-item">
+            <i class="fas fa-newspaper"></i>
+            <span>News</span>
+        </a>
+
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <div class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+            <span>Theme</span>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <header>
+            <img src="logo.png" class="logo">
+            <h1>Harbour College</h1>
+            <p class="slogan">Shaping the Future, One Byte at a Time</p>
+        </header>
+
+        <section class="info reveal">
+
+            <h2>Undergraduate Programs</h2>
+
+            <div class="card">
+                <h3>BCA</h3>
+                <p>Software Engineering, AI foundations, Cybersecurity basics and Cloud Computing.</p>
+                <details>
+                    <summary>Curriculum highlights</summary>
+                    <ul>
+                        <li>Programming in Python & Java</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Introduction to Databases & Web Development</li>
+                        <li>Foundations of Artificial Intelligence</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 3 years • <strong>Eligibility:</strong> 10+2 (any stream) with maths/computer preferred</p>
+                </details>
+            </div>
+
+            <div class="card">
+                <h3>BSc Computer Science</h3>
+                <p>In-depth theory and applied computing—ideal for research and advanced technical roles.</p>
+                <details>
+                    <summary>Curriculum highlights</summary>
+                    <ul>
+                        <li>Discrete Mathematics & Theory of Computation</li>
+                        <li>Operating Systems & Computer Networks</li>
+                        <li>Machine Learning & Data Analytics</li>
+                        <li>Software Engineering Project</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 3 years • <strong>Eligibility:</strong> 10+2 with science/maths</p>
+                </details>
+            </div>
+
+            <div class="card">
+                <h3>BCom</h3>
+                <p>Commerce with modern electives such as Business Analytics and E-commerce.</p>
+                <details>
+                    <summary>Curriculum highlights</summary>
+                    <ul>
+                        <li>Accounting & Financial Reporting</li>
+                        <li>Business Statistics & Analytics</li>
+                        <li>Taxation and Corporate Law</li>
+                        <li>Entrepreneurship & Start-up Lab</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 3 years • <strong>Eligibility:</strong> 10+2 (commerce/science/arts)</p>
+                </details>
+            </div>
+
+            <h2>Postgraduate Programs</h2>
+
+            <div class="card">
+                <h3>MSc Computer Science</h3>
+                <p>Advanced topics including ML, Big Data, and research methods for industry and academia.</p>
+                <details>
+                    <summary>Curriculum highlights</summary>
+                    <ul>
+                        <li>Advanced Machine Learning & Deep Learning</li>
+                        <li>Big Data Systems & Cloud Platforms</li>
+                        <li>Research Project / Thesis</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 2 years • <strong>Eligibility:</strong> Relevant BSc/BCA degree</p>
+                </details>
+            </div>
+
+            <div class="card">
+                <h3>MCom</h3>
+                <p>Specializations in Financial Management, Marketing Research and Business Analytics.</p>
+                <details>
+                    <summary>Curriculum highlights</summary>
+                    <ul>
+                        <li>Advanced Financial Management</li>
+                        <li>Quantitative Methods & Research</li>
+                        <li>Corporate Strategy & Governance</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 2 years • <strong>Eligibility:</strong> BCom or equivalent</p>
+                </details>
+            </div>
+
+            <h2>Placement & Industry Links</h2>
+            <p>
+                Harbour College partners with 50+ recruiters and hosts regular industry workshops,
+                internship pipelines, and campus placement drives. Our Career Services team offers CV
+                coaching, mock interviews and employer networking events.
+            </p>
+
+            <h2>Faculty & Research</h2>
+            <p>
+                Experienced faculty with doctoral qualifications and active research projects in AI,
+                Data Science, and Business Analytics. Students get opportunities to collaborate on
+                funded research and publish work in conferences.
+            </p>
+
+            <h2>Student Support & Facilities</h2>
+            <div class="facilities-grid">
+                <div class="facility">
+                    <i class="fas fa-robot"></i>
+                    <div class="facility-content">
+                        <h4>Dedicated Labs</h4>
+                        <p>Modern AI, Networks and Multimedia labs with industry-grade hardware and software.</p>
+                    </div>
+                </div>
+
+                <div class="facility">
+                    <i class="fas fa-book"></i>
+                    <div class="facility-content">
+                        <h4>Library & Subscriptions</h4>
+                        <p>Extensive print collection plus digital access to journals, e-books and research databases.</p>
+                    </div>
+                </div>
+
+                <div class="facility">
+                    <i class="fas fa-hands-helping"></i>
+                    <div class="facility-content">
+                        <h4>Mentorship & Support</h4>
+                        <p>Mentorship program, counseling services, and an entrepreneurship cell to support student ventures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>How do I apply?</summary>
+                <p>Visit the Admissions page or contact our admissions office via the Contact page for application deadlines and procedures.</p>
+            </details>
+            <details>
+                <summary>Are scholarships available?</summary>
+                <p>Yes — merit-based and need-based scholarships are offered. Contact admissions for eligibility.</p>
+            </details>
+
+            <h2>More Information</h2>
+            <p>For official affiliation and examination details, see the university website:</p>
+            <p><a href="https://www.mangaloreuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Mangalore University - Official Website</a></p>
+
+            <p>
+                <a href="brochure.pdf" class="btn">Download Brochure</a>
+                <a href="contact.html" class="btn">Contact Admissions</a>
+            </p>
+
+        </section>
+
+        <button class="top-btn" onclick="scrollToTop()">↑</button>
+
+        <footer>
+            © 2026 Harbour College (Demo Project). Developed by Prajwal Pereira.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

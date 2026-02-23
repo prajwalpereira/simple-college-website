@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harbour College - News</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <div class="toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="courses.html" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Courses</span>
+        </a>
+
+        <a href="news.html" class="nav-item">
+            <i class="fas fa-newspaper"></i>
+            <span>News</span>
+        </a>
+
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <div class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+            <span>Theme</span>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <header>
+            <img src="logo.png" class="logo">
+            <h1>Harbour College</h1>
+            <p class="slogan">Shaping the Future, One Byte at a Time</p>
+        </header>
+
+        <section class="info reveal">
+
+            <h2>Latest Updates</h2>
+
+            <div class="card">Admissions Open 2026-27</div>
+            <div class="card">New AI & Robotics Lab Inaugurated</div>
+            <div class="card">National IT Fest Announced</div>
+
+            <h2>Upcoming Events</h2>
+
+            <div class="card">Annual Cultural Fest – March 2026</div>
+            <div class="card">24 Hour Hackathon</div>
+            <div class="card">National AI Seminar</div>
+
+            <h2>Achievements</h2>
+
+            <p>
+                Ranked Top 10 in Karnataka • NAAC A Grade • 15 University Gold Medalists
+            </p>
+
+        </section>
+
+        <button class="top-btn" onclick="scrollToTop()">↑</button>
+
+        <footer>
+            © 2026 Harbour College (Demo Project). Developed by Prajwal Pereira.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

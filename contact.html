@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harbour College - Contact</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <div class="toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="courses.html" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Courses</span>
+        </a>
+
+        <a href="news.html" class="nav-item">
+            <i class="fas fa-newspaper"></i>
+            <span>News</span>
+        </a>
+
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <div class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+            <span>Theme</span>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <header>
+            <img src="logo.png" class="logo">
+            <h1>Harbour College</h1>
+            <p class="slogan">Shaping the Future, One Byte at a Time</p>
+        </header>
+
+        <section class="info reveal">
+
+            <h2>Contact Information</h2>
+            <p>Email: info@harbourcollege.edu</p>
+            <p>Phone: +91 9876543210</p>
+            <p>Address: Hampankatta, Mangalore</p>
+
+            <h2>Send Us a Message</h2>
+
+            <form onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Your Name" required><br><br>
+                <input type="email" id="email" placeholder="Your Email" required><br><br>
+                <textarea placeholder="Your Message"></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+
+        <button class="top-btn" onclick="scrollToTop()">↑</button>
+
+        <footer>
+            © 2026 Harbour College (Demo Project). Developed by Prajwal Pereira.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

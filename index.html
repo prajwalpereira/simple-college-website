@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harbour College</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+
+        <div class="toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="courses.html" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Courses</span>
+        </a>
+
+        <a href="news.html" class="nav-item">
+            <i class="fas fa-newspaper"></i>
+            <span>News</span>
+        </a>
+
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <div class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+            <span>Theme</span>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <header>
+            <img src="logo.png" class="logo">
+            <h1>Harbour College</h1>
+            <p class="slogan">Shaping the Future, One Byte at a Time</p>
+        </header>
+
+        <section class="hero reveal">
+            <img src="college.jpg">
+        </section>
+
+        <section class="info reveal">
+
+            <h2>History</h2>
+            <p>
+                Established in 1985, Harbour College has grown into one of the region’s most
+                respected higher education institutions. With a commitment to academic excellence,
+                research innovation, and ethical leadership, the college has produced thousands
+                of successful alumni serving globally.
+            </p>
+
+            <h2>Vision</h2>
+            <p>
+                To become a globally recognized institution fostering innovation,
+                integrity, research excellence and social responsibility.
+            </p>
+
+            <h2>Mission</h2>
+            <p>
+                To provide transformative education, promote entrepreneurship,
+                and empower students with knowledge and skills for a dynamic world.
+            </p>
+
+        </section>
+
+        <section class="programs reveal">
+            <h2>Programs</h2>
+            <div class="program-list">
+                <div class="program-card">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>Focus on software development, algorithms, and systems engineering.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Bachelor of Commerce</h3>
+                    <p>Accounting, finance and entrepreneurship with industry-aligned curriculum.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Master of Business Administration</h3>
+                    <p>Leadership, management and practical projects for career growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="events reveal">
+            <h2>Upcoming Events</h2>
+            <ul class="event-list">
+                <li><strong>Open Day:</strong> March 15, 2026 — Campus tours &amp; info sessions.</li>
+                <li><strong>Research Symposium:</strong> April 10, 2026 — Student research showcase.</li>
+                <li><strong>Tech Fest:</strong> May 2, 2026 — Hackathons and workshops.</li>
+            </ul>
+        </section>
+
+        <section class="testimonials reveal">
+            <h2>Alumni Voices</h2>
+            <div class="testimonial active-testimonial">
+                <p>"Harbour College gave me the skills and confidence to launch my career."</p>
+                <span>- Aisha K., Class of 2015</span>
+            </div>
+            <div class="testimonial">
+                <p>"Supportive faculty and real-world projects made all the difference."</p>
+                <span>- Raj P., Class of 2018</span>
+            </div>
+            <div class="testimonial">
+                <p>"The campus community and placements set me up for success."</p>
+                <span>- Meera S., Class of 2020</span>
+            </div>
+        </section>
+
+        <section class="admission-cta reveal">
+            <h2>Join Us — Apply Now</h2>
+            <p>Applications for the 2026 intake are open. Scholarships available for high achievers.</p>
+            <div class="cta-actions">
+                <a href="contact.html" class="btn apply-btn">Contact Admissions</a>
+                <a href="courses.html" class="btn courses-btn">View Courses</a>
+            </div>
+        </section>
+
+        <section class="stats reveal">
+            <div class="stat-box">
+                <div class="counter" data-target="2500">0</div>
+                <p>Students</p>
+            </div>
+
+            <div class="stat-box">
+                <div class="counter" data-target="150">0</div>
+                <p>Faculty Members</p>
+            </div>
+
+            <div class="stat-box">
+                <div class="counter" data-target="98">0</div>
+                <p>% Placement Rate</p>
+            </div>
+        </section>
+
+        <button class="top-btn" onclick="scrollToTop()">↑</button>
+
+        <footer>
+            © 2026 Harbour College (Demo Project). Developed by Prajwal Pereira.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
