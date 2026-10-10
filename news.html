@@ -3,6 +3,19 @@
 
 <head>
     <title>Harbour College - News</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+
+    <!-- Social preview / SEO -->
+    <meta name="description" content="Latest news, events and achievements from Harbour College." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Harbour College — News" />
+    <meta property="og:description" content="Latest news, events and achievements from Harbour College." />
+    <meta property="og:image" content="logo.png" />
+    <meta property="og:url" content="/news.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Harbour College — News" />
+    <meta name="twitter:description" content="Latest news, events and achievements from Harbour College." />
+    <meta name="twitter:image" content="logo.png" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -10,6 +23,8 @@
 </head>
 
 <body>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
 
     <div class="sidebar" id="sidebar">
         <div class="toggle" onclick="toggleSidebar()">
@@ -48,27 +63,33 @@
             <img src="logo.png" class="logo">
             <h1>Harbour College</h1>
             <p class="slogan">Shaping the Future, One Byte at a Time</p>
+
+            <button class="search-btn" id="searchBtn" title="Search (Ctrl+K)" aria-label="Search the site">
+                <i class="fas fa-search"></i>
+            </button>
         </header>
 
         <section class="info reveal">
 
             <h2>Latest Updates</h2>
 
-            <div class="card">Admissions Open 2026-27</div>
-            <div class="card">New AI & Robotics Lab Inaugurated</div>
-            <div class="card">National IT Fest Announced</div>
+            <div class="news-controls">
+                <div class="chips" id="newsChips">
+                    <button class="chip active" data-filter="all">All</button>
+                    <button class="chip" data-filter="Admissions">Admissions</button>
+                    <button class="chip" data-filter="Events">Events</button>
+                    <button class="chip" data-filter="Achievements">Achievements</button>
+                    <button class="chip" data-filter="Campus">Campus</button>
+                </div>
+                <input type="search" id="newsSearch" class="news-search" placeholder="Search news…" aria-label="Search news">
+            </div>
+
+            <div class="news-grid" id="newsGrid"></div>
+            <p class="news-empty" id="newsEmpty" hidden>No news found. Try a different search.</p>
 
             <h2>Upcoming Events</h2>
 
-            <div class="card">Annual Cultural Fest – March 2026</div>
-            <div class="card">24 Hour Hackathon</div>
-            <div class="card">National AI Seminar</div>
-
-            <h2>Achievements</h2>
-
-            <p>
-                Ranked Top 10 in Karnataka • NAAC A Grade • 15 University Gold Medalists
-            </p>
+            <div class="events-grid" id="eventsGrid"></div>
 
         </section>
 
@@ -79,6 +100,25 @@
         </footer>
 
     </div>
+
+    <!-- News article modal -->
+    <div class="modal-backdrop" id="newsModal" hidden>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="newsModalClose" aria-label="Close article">×</button>
+            <span class="news-cat" id="modalCat"></span>
+            <h2 id="modalTitle"></h2>
+            <time id="modalDate"></time>
+            <p id="modalBody"></p>
+        </div>
+    </div>
+
+    <!-- Chat widget markup -->
+    <div class="chat-widget" id="chatWidget" aria-hidden="true">
+        <div class="chat-header" id="chatHeader">Chat with us <button class="chat-close" id="chatClose" aria-label="Close chat">×</button></div>
+        <div class="chat-body" id="chatBody" aria-live="polite"></div>
+        <form class="chat-form" id="chatForm"><input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off"><button type="submit">Send</button></form>
+    </div>
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">💬</button>
 
     <script src="script.js"></script>
 </body>
