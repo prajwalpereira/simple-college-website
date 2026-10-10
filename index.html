@@ -4,12 +4,28 @@
 <head>
     <title>Harbour College</title>
 
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+
+    <!-- Social preview / SEO -->
+    <meta name="description" content="Harbour College — programs in computing, commerce and management. Admissions open for 2026." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Harbour College" />
+    <meta property="og:description" content="Shaping the Future, One Byte at a Time — programs, news and contact information." />
+    <meta property="og:image" content="logo.png" />
+    <meta property="og:url" content="/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Harbour College" />
+    <meta name="twitter:description" content="Programs, events and admissions information for Harbour College." />
+    <meta name="twitter:image" content="logo.png" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
 
     <div class="sidebar" id="sidebar">
 
@@ -50,6 +66,10 @@
             <img src="logo.png" class="logo">
             <h1>Harbour College</h1>
             <p class="slogan">Shaping the Future, One Byte at a Time</p>
+
+            <button class="search-btn" id="searchBtn" title="Search (Ctrl+K)" aria-label="Search the site">
+                <i class="fas fa-search"></i>
+            </button>
         </header>
 
         <section class="hero reveal">
@@ -100,11 +120,18 @@
 
         <section class="events reveal">
             <h2>Upcoming Events</h2>
-            <ul class="event-list">
-                <li><strong>Open Day:</strong> March 15, 2026 — Campus tours &amp; info sessions.</li>
-                <li><strong>Research Symposium:</strong> April 10, 2026 — Student research showcase.</li>
-                <li><strong>Tech Fest:</strong> May 2, 2026 — Hackathons and workshops.</li>
-            </ul>
+            <ul class="event-list" id="eventList"></ul>
+        </section>
+
+        <section class="countdown reveal">
+            <h2>Next Event</h2>
+            <p id="countdownLabel">Loading…</p>
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="cd-unit"><span class="cd-value" id="cdDays">--</span><span class="cd-label">Days</span></div>
+                <div class="cd-unit"><span class="cd-value" id="cdHours">--</span><span class="cd-label">Hours</span></div>
+                <div class="cd-unit"><span class="cd-value" id="cdMinutes">--</span><span class="cd-label">Minutes</span></div>
+                <div class="cd-unit"><span class="cd-value" id="cdSeconds">--</span><span class="cd-label">Seconds</span></div>
+            </div>
         </section>
 
         <section class="testimonials reveal">
@@ -120,6 +147,12 @@
             <div class="testimonial">
                 <p>"The campus community and placements set me up for success."</p>
                 <span>- Meera S., Class of 2020</span>
+            </div>
+
+            <div class="testimonial-controls">
+                <button class="t-btn" id="tPrev" aria-label="Previous testimonial">‹</button>
+                <div class="t-dots" id="tDots"></div>
+                <button class="t-btn" id="tNext" aria-label="Next testimonial">›</button>
             </div>
         </section>
 
@@ -156,6 +189,14 @@
         </footer>
 
     </div>
+
+    <!-- Chat widget markup -->
+    <div class="chat-widget" id="chatWidget" aria-hidden="true">
+        <div class="chat-header" id="chatHeader">Chat with us <button class="chat-close" id="chatClose" aria-label="Close chat">×</button></div>
+        <div class="chat-body" id="chatBody" aria-live="polite"></div>
+        <form class="chat-form" id="chatForm"><input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off"><button type="submit">Send</button></form>
+    </div>
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">💬</button>
 
     <script src="script.js"></script>
 </body>
